@@ -23,7 +23,7 @@ print("\nPirmie 3:") #izvadam tekstu
 print(filtreti.head(3).to_string(index=False)) #izvadam pirmas 3 filtr. rindas bez indeksa
 
 #1.3 - atlasit tikai rigas iestades
-riga = filtreti[filtreti["ADRESE"].str.contains("Rīga", na=False)][["NOSAUKUMS", "ADRESE"]] #filtr. tikai riga un atlasam tikai nosaukuma un adreses kolonnas
+riga = filtreti[filtreti["ADRESE"].str.contains(", Rīga,", na=False)][["NOSAUKUMS", "ADRESE"]] #filtr. tikai riga un atlasam tikai nosaukuma un adreses kolonnas
 
 print("\n" + "=" * 60) #izvadam atdalitaju
 print("Iestādes Rīgā") #izvadam virsrakstu
